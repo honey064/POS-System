@@ -38,11 +38,11 @@ const BottomNav = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#262626] p-2 h-16 flex justify-around">
+    <div className="fixed bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md border-t border-white/20 p-2 h-16 flex justify-around">
       <button
         onClick={() => navigate("/")}
         className={`flex items-center justify-center font-bold ${
-          isActive("/") ? "text-[#f5f5f5] bg-[#343434]" : "text-[#ababab]"
+          isActive("/") ? "text-white bg-white/20 backdrop-blur-sm" : "text-white/70"
         } w-[300px] rounded-[20px]`}
       >
         <FaHome className="inline mr-2" size={20} /> <p>Home</p>
@@ -50,7 +50,7 @@ const BottomNav = () => {
       <button
         onClick={() => navigate("/orders")}
         className={`flex items-center justify-center font-bold ${
-          isActive("/orders") ? "text-[#f5f5f5] bg-[#343434]" : "text-[#ababab]"
+          isActive("/orders") ? "text-white bg-white/20 backdrop-blur-sm" : "text-white/70"
         } w-[300px] rounded-[20px]`}
       >
         <MdOutlineReorder className="inline mr-2" size={20} /> <p>Orders</p>
@@ -58,19 +58,19 @@ const BottomNav = () => {
       <button
         onClick={() => navigate("/tables")}
         className={`flex items-center justify-center font-bold ${
-          isActive("/tables") ? "text-[#f5f5f5] bg-[#343434]" : "text-[#ababab]"
+          isActive("/tables") ? "text-white bg-white/20 backdrop-blur-sm" : "text-white/70"
         } w-[300px] rounded-[20px]`}
       >
         <MdTableBar className="inline mr-2" size={20} /> <p>Tables</p>
       </button>
-      <button className="flex items-center justify-center font-bold text-[#ababab] w-[300px]">
+      <button className="flex items-center justify-center font-bold text-white/70 w-[300px]">
         <CiCircleMore className="inline mr-2" size={20} /> <p>More</p>
       </button>
 
       <button
         disabled={isActive("/tables") || isActive("/menu")}
         onClick={openModal}
-        className="absolute bottom-6 bg-[#F6B100] text-[#f5f5f5] rounded-full p-4 items-center"
+        className="absolute bottom-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full p-4 items-center shadow-lg hover:shadow-xl transition-all"
       >
         <BiSolidDish size={40} />
       </button>

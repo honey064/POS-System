@@ -43,10 +43,10 @@ const Login = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label className="block text-[#ababab] mb-2 mt-3 text-sm font-medium">
+          <label className="block text-white/70 mb-2 mt-3 text-sm font-medium">
             Employee Email
           </label>
-          <div className="flex item-center rounded-lg p-5 px-4 bg-[#1f1f1f]">
+          <div className="flex item-center rounded-lg p-5 px-4 bg-white/20 backdrop-blur-sm border border-white/30">
             <input
               type="email"
               name="email"
@@ -59,10 +59,10 @@ const Login = () => {
           </div>
         </div>
         <div>
-          <label className="block text-[#ababab] mb-2 mt-3 text-sm font-medium">
+          <label className="block text-white/70 mb-2 mt-3 text-sm font-medium">
             Password
           </label>
-          <div className="flex item-center rounded-lg p-5 px-4 bg-[#1f1f1f]">
+          <div className="flex item-center rounded-lg p-5 px-4 bg-white/20 backdrop-blur-sm border border-white/30">
             <input
               type="password"
               name="password"
@@ -77,7 +77,7 @@ const Login = () => {
 
         <button
           type="submit"
-          className="w-full rounded-lg mt-6 py-3 text-lg bg-yellow-400 text-gray-900 font-bold"
+          className="w-full rounded-lg mt-6 py-3 text-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold hover:from-purple-600 hover:to-indigo-700 transition-all shadow-lg"
         >
           Sign in
         </button>
