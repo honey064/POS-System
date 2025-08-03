@@ -14,7 +14,7 @@ const Home = () => {
     }, [])
 
   return (
-    <section className="bg-transparent h-[calc(100vh-5rem)] overflow-hidden flex gap-3">
+    <section className="bg-gray-950 min-h-[calc(100vh-5rem)] overflow-hidden flex gap-3">
       {/* Left Div */}
       <div className="flex-[3]">
         <Greetings />

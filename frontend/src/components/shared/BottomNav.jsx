@@ -38,39 +38,39 @@ const BottomNav = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-white/10 backdrop-blur-md border-t border-white/20 p-2 h-16 flex justify-around">
+    <div className="fixed bottom-0 left-0 right-0 bg-gray-900/95 backdrop-blur-sm border-t border-gray-800 p-2 h-16 flex justify-around">
       <button
         onClick={() => navigate("/")}
         className={`flex items-center justify-center font-bold ${
-          isActive("/") ? "text-white bg-white/20 backdrop-blur-sm" : "text-white/70"
-        } w-[300px] rounded-[20px]`}
+          isActive("/") ? "text-white bg-indigo-600" : "text-gray-400"
+        } w-[300px] rounded-xl transition-all hover:text-white`}
       >
         <FaHome className="inline mr-2" size={20} /> <p>Home</p>
       </button>
       <button
         onClick={() => navigate("/orders")}
         className={`flex items-center justify-center font-bold ${
-          isActive("/orders") ? "text-white bg-white/20 backdrop-blur-sm" : "text-white/70"
-        } w-[300px] rounded-[20px]`}
+          isActive("/orders") ? "text-white bg-indigo-600" : "text-gray-400"
+        } w-[300px] rounded-xl transition-all hover:text-white`}
       >
         <MdOutlineReorder className="inline mr-2" size={20} /> <p>Orders</p>
       </button>
       <button
         onClick={() => navigate("/tables")}
         className={`flex items-center justify-center font-bold ${
-          isActive("/tables") ? "text-white bg-white/20 backdrop-blur-sm" : "text-white/70"
-        } w-[300px] rounded-[20px]`}
+          isActive("/tables") ? "text-white bg-indigo-600" : "text-gray-400"
+        } w-[300px] rounded-xl transition-all hover:text-white`}
       >
         <MdTableBar className="inline mr-2" size={20} /> <p>Tables</p>
       </button>
-      <button className="flex items-center justify-center font-bold text-white/70 w-[300px]">
+      <button className="flex items-center justify-center font-bold text-gray-400 w-[300px] hover:text-white transition-colors">
         <CiCircleMore className="inline mr-2" size={20} /> <p>More</p>
       </button>
 
       <button
         disabled={isActive("/tables") || isActive("/menu")}
         onClick={openModal}
-        className="absolute bottom-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-full p-4 items-center shadow-lg hover:shadow-xl transition-all"
+        className="absolute bottom-6 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full p-4 items-center shadow-lg transition-all disabled:opacity-50"
       >
         <BiSolidDish size={40} />
       </button>

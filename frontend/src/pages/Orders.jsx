@@ -27,25 +27,25 @@ const Orders = () => {
   }
 
   return (
-    <section className="bg-[#1f1f1f]  h-[calc(100vh-5rem)] overflow-hidden">
+    <section className="bg-gray-950 min-h-[calc(100vh-5rem)] overflow-hidden">
       <div className="flex items-center justify-between px-10 py-4">
         <div className="flex items-center gap-4">
           <BackButton />
-          <h1 className="text-[#f5f5f5] text-2xl font-bold tracking-wider">
+          <h1 className="text-white text-2xl font-bold tracking-wider">
             Orders
           </h1>
         </div>
         <div className="flex items-center justify-around gap-4">
-          <button onClick={() => setStatus("all")} className={`text-[#ababab] text-lg ${status === "all" && "bg-[#383838] rounded-lg px-5 py-2"}  rounded-lg px-5 py-2 font-semibold`}>
+          <button onClick={() => setStatus("all")} className={`text-gray-400 text-lg ${status === "all" && "bg-indigo-600 text-white"} rounded-lg px-5 py-2 font-semibold transition-colors hover:text-white`}>
             All
           </button>
-          <button onClick={() => setStatus("progress")} className={`text-[#ababab] text-lg ${status === "progress" && "bg-[#383838] rounded-lg px-5 py-2"}  rounded-lg px-5 py-2 font-semibold`}>
+          <button onClick={() => setStatus("progress")} className={`text-gray-400 text-lg ${status === "progress" && "bg-indigo-600 text-white"} rounded-lg px-5 py-2 font-semibold transition-colors hover:text-white`}>
             In Progress
           </button>
-          <button onClick={() => setStatus("ready")} className={`text-[#ababab] text-lg ${status === "ready" && "bg-[#383838] rounded-lg px-5 py-2"}  rounded-lg px-5 py-2 font-semibold`}>
+          <button onClick={() => setStatus("ready")} className={`text-gray-400 text-lg ${status === "ready" && "bg-indigo-600 text-white"} rounded-lg px-5 py-2 font-semibold transition-colors hover:text-white`}>
             Ready
           </button>
-          <button onClick={() => setStatus("completed")} className={`text-[#ababab] text-lg ${status === "completed" && "bg-[#383838] rounded-lg px-5 py-2"}  rounded-lg px-5 py-2 font-semibold`}>
+          <button onClick={() => setStatus("completed")} className={`text-gray-400 text-lg ${status === "completed" && "bg-indigo-600 text-white"} rounded-lg px-5 py-2 font-semibold transition-colors hover:text-white`}>
             Completed
           </button>
         </div>

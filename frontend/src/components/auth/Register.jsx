@@ -53,10 +53,10 @@ const Register = ({setIsRegister}) => {
     <div>
       <form onSubmit={handleSubmit}>
         <div>
-          <label className="block text-white/70 mb-2 text-sm font-medium">
+          <label className="block text-gray-400 mb-2 text-sm font-medium">
             Employee Name
           </label>
-          <div className="flex item-center rounded-lg p-5 px-4 bg-white/20 backdrop-blur-sm border border-white/30">
+          <div className="flex item-center rounded-lg p-5 px-4 bg-gray-800/50 border border-gray-700">
             <input
               type="text"
               name="name"
@@ -69,10 +69,10 @@ const Register = ({setIsRegister}) => {
           </div>
         </div>
         <div>
-          <label className="block text-white/70 mb-2 mt-3 text-sm font-medium">
+          <label className="block text-gray-400 mb-2 mt-3 text-sm font-medium">
             Employee Email
           </label>
-          <div className="flex item-center rounded-lg p-5 px-4 bg-white/20 backdrop-blur-sm border border-white/30">
+          <div className="flex item-center rounded-lg p-5 px-4 bg-gray-800/50 border border-gray-700">
             <input
               type="email"
               name="email"
@@ -85,10 +85,10 @@ const Register = ({setIsRegister}) => {
           </div>
         </div>
         <div>
-          <label className="block text-white/70 mb-2 mt-3 text-sm font-medium">
+          <label className="block text-gray-400 mb-2 mt-3 text-sm font-medium">
             Employee Phone
           </label>
-          <div className="flex item-center rounded-lg p-5 px-4 bg-white/20 backdrop-blur-sm border border-white/30">
+          <div className="flex item-center rounded-lg p-5 px-4 bg-gray-800/50 border border-gray-700">
             <input
               type="number"
               name="phone"
@@ -101,10 +101,10 @@ const Register = ({setIsRegister}) => {
           </div>
         </div>
         <div>
-          <label className="block text-white/70 mb-2 mt-3 text-sm font-medium">
+          <label className="block text-gray-400 mb-2 mt-3 text-sm font-medium">
             Password
           </label>
-          <div className="flex item-center rounded-lg p-5 px-4 bg-white/20 backdrop-blur-sm border border-white/30">
+          <div className="flex item-center rounded-lg p-5 px-4 bg-gray-800/50 border border-gray-700">
             <input
               type="password"
               name="password"
@@ -117,7 +117,7 @@ const Register = ({setIsRegister}) => {
           </div>
         </div>
         <div>
-          <label className="block text-white/70 mb-2 mt-3 text-sm font-medium">
+          <label className="block text-gray-400 mb-2 mt-3 text-sm font-medium">
             Choose your role
           </label>
 
@@ -128,8 +128,8 @@ const Register = ({setIsRegister}) => {
                   key={role}
                   type="button"
                   onClick={() => handleRoleSelection(role)}
-                  className={`bg-white/20 backdrop-blur-sm border border-white/30 px-4 py-3 w-full rounded-lg text-white/70 hover:bg-white/30 transition-all ${
-                    formData.role === role ? "bg-gradient-to-r from-purple-500 to-indigo-600 text-white" : ""
+                  className={`bg-gray-800/50 border border-gray-700 px-4 py-3 w-full rounded-lg text-gray-400 transition-colors ${
+                    formData.role === role ? "bg-indigo-600 text-white border-indigo-500" : "hover:bg-gray-700/50"
                   }`}
                 >
                   {role}
@@ -141,7 +141,7 @@ const Register = ({setIsRegister}) => {
 
         <button
           type="submit"
-          className="w-full rounded-lg mt-6 py-3 text-lg bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-bold hover:from-purple-600 hover:to-indigo-700 transition-all shadow-lg"
+          className="w-full rounded-lg mt-6 py-3 text-lg bg-indigo-600 hover:bg-indigo-700 text-white font-bold transition-colors"
         >
           Sign up
         </button>

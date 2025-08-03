@@ -33,7 +33,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex justify-between items-center py-4 px-8 bg-white/10 backdrop-blur-md border-b border-white/20">
+    <header className="flex justify-between items-center py-4 px-8 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
       {/* LOGO */}
       <div onClick={() => navigate("/")} className="flex items-center gap-2 cursor-pointer">
         <img src={logo} className="h-8 w-8" alt="restro logo" />
@@ -43,38 +43,38 @@ const Header = () => {
       </div>
 
       {/* SEARCH */}
-      <div className="flex items-center gap-4 bg-white/20 backdrop-blur-sm rounded-[15px] px-5 py-2 w-[500px]">
-        <FaSearch className="text-white" />
+      <div className="flex items-center gap-4 bg-gray-800/50 rounded-xl px-5 py-3 w-[500px] border border-gray-700">
+        <FaSearch className="text-gray-400" />
         <input
           type="text"
           placeholder="Search"
-          className="bg-transparent outline-none text-white placeholder-white/70 w-full"
+          className="bg-transparent outline-none text-white placeholder-gray-400 flex-1"
         />
       </div>
 
       {/* LOGGED USER DETAILS */}
       <div className="flex items-center gap-4">
         {userData.role === "Admin" && (
-          <div onClick={() => navigate("/dashboard")} className="bg-white/20 backdrop-blur-sm rounded-[15px] p-3 cursor-pointer hover:bg-white/30 transition-all">
+          <div onClick={() => navigate("/dashboard")} className="bg-gray-800/50 rounded-xl p-3 cursor-pointer hover:bg-gray-700/50 transition-colors border border-gray-700">
             <MdDashboard className="text-white text-2xl" />
           </div>
         )}
-        <div className="bg-white/20 backdrop-blur-sm rounded-[15px] p-3 cursor-pointer hover:bg-white/30 transition-all">
+        <div className="bg-gray-800/50 rounded-xl p-3 cursor-pointer hover:bg-gray-700/50 transition-colors border border-gray-700">
           <FaBell className="text-white text-2xl" />
         </div>
         <div className="flex items-center gap-3 cursor-pointer">
-          <FaUserCircle className="text-white text-4xl" />
+          <FaUserCircle className="text-indigo-400 text-4xl" />
           <div className="flex flex-col items-start">
             <h1 className="text-md text-white font-semibold tracking-wide">
               {userData.name || "TEST USER"}
             </h1>
-            <p className="text-xs text-white/70 font-medium">
+            <p className="text-xs text-gray-400 font-medium">
               {userData.role || "Role"}
             </p>
           </div>
           <IoLogOut
             onClick={handleLogout}
-            className="text-white ml-2 hover:text-red-300 transition-colors"
+            className="text-gray-400 hover:text-red-400 ml-2 transition-colors cursor-pointer"
             size={40}
           />
         </div>

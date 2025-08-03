@@ -26,16 +26,16 @@ const Greetings = () => {
   return (
     <div className="flex justify-between items-center px-8 mt-5">
       <div>
-        <h1 className="text-[#f5f5f5] text-2xl font-semibold tracking-wide">
+        <h1 className="text-white text-2xl font-semibold tracking-wide">
           Good Morning, {userData.name || "TEST USER"}
         </h1>
-        <p className="text-[#ababab] text-sm">
+        <p className="text-gray-400 text-sm">
           Give your best services for customers 😀
         </p>
       </div>
       <div>
-        <h1 className="text-[#f5f5f5] text-3xl font-bold tracking-wide w-[130px]">{formatTime(dateTime)}</h1>
-        <p className="text-[#ababab] text-sm">{formatDate(dateTime)}</p>
+        <h1 className="text-white text-3xl font-bold tracking-wide w-[130px]">{formatTime(dateTime)}</h1>
+        <p className="text-gray-400 text-sm">{formatDate(dateTime)}</p>
       </div>
     </div>
   );

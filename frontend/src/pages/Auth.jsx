@@ -32,13 +32,13 @@ const Auth = () => {
       </div>
 
       {/* Right Section */}
-      <div className="w-1/2 min-h-screen bg-white/10 backdrop-blur-md p-10">
+      <div className="w-1/2 min-h-screen bg-gray-950 p-10">
         <div className="flex flex-col items-center gap-2">
           <img src={logo} alt="Restro Logo" className="h-14 w-14 border-2 rounded-full p-1" />
           <h1 className="text-lg font-semibold text-white tracking-wide">Restro</h1>
         </div>
 
-        <h2 className="text-4xl text-center mt-10 font-semibold text-white mb-10">
+        <h2 className="text-4xl text-center mt-10 font-semibold text-indigo-400 mb-10">
           {isRegister ? "Employee Registration" : "Employee Login"}
         </h2>
 
@@ -47,9 +47,9 @@ const Auth = () => {
 
 
         <div className="flex justify-center mt-6">
-          <p className="text-sm text-white/70">
+          <p className="text-sm text-gray-400">
             {isRegister ? "Already have an account?" : "Don't have an account?"}
-            <a onClick={() => setIsRegister(!isRegister)} className="text-blue-300 font-semibold hover:underline ml-1 cursor-pointer" href="#">
+            <a onClick={() => setIsRegister(!isRegister)} className="text-indigo-400 font-semibold hover:underline cursor-pointer ml-1" href="#">
               {isRegister ? "Sign in" : "Sign up"}
             </a>
           </p>
